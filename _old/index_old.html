@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Batik Hair Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+  
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/gmaps.js"></script>
+      
+    <!-- Gallery -->
+	<script src='js/jquery.min.js'></script>
+	<link rel='stylesheet' href='css/justifiedGallery.css' type='text/css' media='all' />
+	<script src='js/justifiedGallery.js'></script>
+	<link rel='stylesheet' href='js/jquery-colorbox/colorbox.css' type='text/css' media='screen' />
+	<script src='js/jquery-colorbox/jquery.colorbox-min.js'></script>
+	<script>
+		$(document).ready(function () {
+			$(".colorboxEx").each(function (i, el) {
+				$(el).justifiedGallery({rel: 'gal' + i}).on('jg.complete', function () {
+					$(this).find('a').colorbox({
+						maxWidth : '80%',
+						maxHeight : '80%',
+						opacity : 0.8,
+						transition : 'elastic',
+						current : ''
+					});
+				});
+			});
+		});
+	</script>
+    <!-- / .gallery colorbox -->
+      
+
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+      
+    <script type="text/javascript">
+    var map;
+    $(document).ready(function(){
+      map = new GMaps({
+        el: '#map',
+        lat: 53.3224208,
+        lng: -6.2510185,
+      });
+      map.addMarker({
+        lat: 53.3224208,
+        lng: -6.2510185,
+        title: 'Ranelagh',
+        details: {
+          database_id: 42,
+          author: 'HPNeo'
+        },
+        click: function(e){
+          if(console.log)
+            console.log(e);
+          alert('Batik Hair Stuio is based here.');
+        },
+        mouseover: function(e){
+          if(console.log)
+            console.log(e);
+        }
+      });
+    });
+  </script>
+
+ </head>
+ <body>
+      <header class="headerbanner">
+          
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  MENU <span class="caret"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://www.facebook.com/batikhairstudio?fref=ts" target="blank"><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                    <li><a href="https://instagram.com/batikhairstudio/" target="blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+                    <li><a href="https://www.facebook.com/batikhairstudio/" target="blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href="https://twitter.com/batikhairstudio" target="blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+                             <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#pricelist">PRICE LIST</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                </ul>  
+            </div>
+         </nav> 
+        
+      
+      
+      <div class="row header-content">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="header-content-inner">
+  
+            <div class="logo"></div>
+            <h3>Book an appointment</h3>
+             <h2>087 272 0004</h2>
+            </h3>
+         </div><!-- .header-content-inner-->   
+        </div><!-- .col-->
+      </div> <!-- .row -->
+    </div><!-- .container .header-content-->
+  </header>
+
+  <section id="about" class="aboutsection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Inside the studio</h2>
+        </div>
+      </div><!-- .row -->
+    </div><!-- .container -->
+    
+    <div class="container">
+      <div class="row">
+            <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+                
+                <div class="colorboxEx workgallery">
+                    <a href="images/gallery/cuttingHair_b.jpg">
+                        <img src="images/gallery/cuttingHair.jpg" />
+                    </a>
+                    <a href="images/gallery/hugs_b.jpg">
+                        <img src="images/gallery/hugs.jpg" />
+                    </a>
+
+                    <a href="images/gallery/wedding_b.jpg">
+                        <img src="images/gallery/wedding.jpg" />
+                    </a>
+                    <a href="images/gallery/man_b.jpg">
+                        <img  src="images/gallery/man_b.jpg" />
+                    </a>
+                    <a href="images/gallery/busy_b.jpg">
+                        <img src="images/gallery/busy.jpg" />
+                    </a>
+                    <a href="images/gallery/red_hair_b.jpg">
+                        <img src="images/gallery/red_hair.jpg" />
+                    </a>
+                    <a href="images/gallery/hairwash_b.jpg">
+                        <img src="images/gallery/hairwash.jpg" />
+                    </a>
+                     
+                    <a href="images/gallery/flyer_b.jpg">
+                        <img src="images/gallery/flyer.jpg" />
+                    </a>
+
+                </div>
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+         
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h4>
+            At Batik Hair Studio we enjoy giving you a new look that will give you confidence and put a smile on your face.
+            
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section><!-- .about section-->
+
+  <section id="pricelist" class="pricelistsection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1 text-center section-heading">
+          <h2> Price list</h2>
+          <a href="batik_A5.pdf" class="btn btn-default"  download="pricelist">Download pricelist</a>
+        </div>
+      </div><!-- .row -->
+    </div><!-- .container -->
+   
+    <div class="container">
+      <div class="row">
+         <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+            <div class="list-group accordion">
+                <a href="#" class="list-group-item accordion-control price in"><i class="glyphicon glyphicon-minus"></i> BLOW DRYS</a>
+                  <div class=" list-group-item accordion-panel" id="show">
+                   <div class="row price title-deactive">
+                        <div class="col-xs-4 "></div>
+                        <div class="col-xs-4 text-center">SENIOR STYLIST</div>
+                        <div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Short</div>
+                        <div class="col-xs-4 text-center">&euro;25</div>
+                        <div class="col-xs-4 text-center">&euro;25</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Medium</div>
+                        <div class="col-xs-4 text-center">&euro;25</div>
+                        <div class="col-xs-4 text-center">&euro;25</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Long\Bouncy</div>
+                        <div class="col-xs-4  text-center">&euro;30</div>
+                        <div class="col-xs-4 text-center">&euro;30</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4 ">With Extensions</div>
+                        <div class="col-xs-4 text-center">&euro;35</div>
+                        <div class="col-xs-4 text-center">&euro;35</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">GHD Curls</div>
+                        <div class="col-xs-4  text-center">&euro;25-&euro;30</div>
+                        <div class="col-xs-4 text-center">&euro;25-&euro;30</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Upstyle</div>
+                        <div class="col-xs-4  text-center">&euro;40-&euro;60</div>
+                        <div class="col-xs-4 text-center">&euro;40-&euro;60</div>
+                      </div><!-- /.row -->
+                  </div><!-- / .accordion-panel -->
+            </div><!-- /.list-group accordion -->
+        </div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+      </div><!-- /.row -->
+
+      <div class="row">
+         <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+            <div class="list-group accordion">
+                <a href="#" class="list-group-item accordion-control price" id="panel2"><i class="glyphicon glyphicon-plus"></i>CUT & BLOWDRY</a>
+                  <div class=" list-group-item accordion-panel">
+                      <div class="row price title-deactive">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4 text-center">SENIOR STYLIST</div>
+                        <div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Ladies: Shampoo, Cut & Blowdry</div>
+                        <div class="col-xs-4 text-center">&euro;50</div>
+                        <div class="col-xs-4 text-center">&euro;60</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Gents: Shampoo, Cut & Blowdry</div>
+                        <div class="col-xs-4 text-center">&euro;25</div>
+                        <div class="col-xs-4 text-center">&euro;30</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Students: Shampoo, Cut & Blowdry</div>
+                        <div class="col-xs-4 text-center">&euro;40</div>
+                        <div class="col-xs-4 text-center">&euro;50</div>
+                      </div><!-- /.row -->
+                  </div><!-- / .accordion-panel -->
+            </div><!-- /.list-group accordion -->
+        </div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+      </div><!-- /.row -->
+
+      <div class="row">
+         <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+            <div class="list-group accordion">
+                <a href="#" class="list-group-item accordion-control price"><i class="glyphicon glyphicon-plus"></i>COLOUR SERVICES</a>
+                  <div class=" list-group-item accordion-panel">
+                      <div class="row price title-deactive">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4 text-center">SENIOR STYLIST</div>
+                        <div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Highlights - Full Head</div>
+                        <div class="col-xs-4 text-center">&euro;100</div>
+                        <div class="col-xs-4 text-center">&euro;110</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Highlights - Half Head</div>
+                        <div class="col-xs-4 text-center">&euro;70</div>
+                        <div class="col-xs-4 text-center">&euro;75</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Highlights - T-Bar</div>
+                        <div class="col-xs-4 text-center">&euro;45</div>
+                        <div class="col-xs-4 text-center">&euro;55</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Balayage</div>
+                        <div class="col-xs-4 text-center">&euro;60-&euro;90</div>
+                        <div class="col-xs-4 text-center">&euro;70-&euro;100</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Semi Permanent Colour</div>
+                        <div class="col-xs-4 text-center">&euro;55</div>
+                        <div class="col-xs-4 text-center">&euro;60</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Tint & Scattered</div>
+                        <div class="col-xs-4 text-center">&euro;85</div>
+                        <div class="col-xs-4 text-center">&euro;95</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Tint - Masking</div>
+                        <div class="col-xs-4 text-center">&euro;30</div>
+                        <div class="col-xs-4 text-center">&euro;30</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Tint - Roots Only</div>
+                        <div class="col-xs-4 text-center">&euro;55</div>
+                        <div class="col-xs-4 text-center">&euro;60</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Tint - Roots to Ends</div>
+                        <div class="col-xs-4 text-center">&euro;65</div>
+                        <div class="col-xs-4 text-center">&euro;75</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Tint - Chemical Free</div>
+                        <div class="col-xs-4 text-center">&euro;50</div>
+                        <div class="col-xs-4 text-center">&euro;60</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Bleach Tint</div>
+                        <div class="col-xs-4 text-center">&euro;80</div>
+                        <div class="col-xs-4 text-center">&euro;90</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Gloss Service</div>
+                        <div class="col-xs-4 text-center">&euro;45</div>
+                        <div class="col-xs-4 text-center">&euro;45</div>
+                      </div><!-- /.row -->
+                      <div class="row price">
+                        <div class="col-xs-4">Cellophanes</div>
+                        <div class="col-xs-4 text-center">&euro;30</div>
+                        <div class="col-xs-4 text-center">&euro;30</div>
+                      </div><!-- /.row -->
+                      
+                  </div><!-- / .accordion-panel -->
+            </div><!-- /.list-group accordion -->
+        </div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+      </div><!-- /.row -->
+
+      <div class="row">
+         <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+            <div class="list-group accordion title-deactive">
+                <a href="#" class="list-group-item accordion-control price"><i class="glyphicon glyphicon-plus"></i>TREATMENTS</a>
+                  <div class=" list-group-item accordion-panel">
+                      <div class="row price title-deactive">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4 text-center">SENIOR STYLIST</div>
+                        <div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Full Treatment</div>
+                        <div class="col-xs-4 text-center">&euro;20</div>
+                        <div class="col-xs-4 text-center">&euro;20</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Mini Treatment</div>
+                        <div class="col-xs-4 text-center">&euro;10</div>
+                        <div class="col-xs-4 text-center">&euro;10</div>
+                      </div><!-- /.row -->
+                  </div><!-- / .accordion-panel -->
+            </div><!-- /.list-group accordion -->
+        </div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+      </div><!-- /.row -->
+
+      <div class="row">
+         <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+            <div class="list-group accordion title-deactive">
+                <a href="#" class="list-group-item accordion-control price"><i class="glyphicon glyphicon-plus"></i>RELAXERS</a>
+                  <div class=" list-group-item accordion-panel">
+                      <div class="row price title-deactive">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4 text-center">SENIOR STYLIST</div>
+                        <div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Permanent Relaxer</div>
+                        <div class="col-xs-4 text-center">&euro;140-&euro;160</div>
+                        <div class="col-xs-4 text-center">&euro;140-&euro;160</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4">Keratin 12 Week Blowdry</div>
+                        <div class="col-xs-4 text-center">&euro;100-&euro;130</div>
+                        <div class="col-xs-4 text-center">&euro;100-&euro;130</div>
+                      </div><!-- /.row -->
+                  </div><!-- / .accordion-panel -->
+            </div><!-- /.list-group accordion -->
+        </div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+      </div><!-- /.row -->
+        
+      <div class="row">
+         <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+            <div class="list-group accordion">
+                <a href="#" class="list-group-item accordion-control price"><i class="glyphicon glyphicon-plus"></i>HAIR EXTENSIONS</a>
+                  <div class=" list-group-item accordion-panel">
+                      <div class="row price title-deactive">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4 text-center">SENIOR STYLIST</div>
+                        <div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+                      </div><!-- /.row -->
+                       <div class="row price">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4 text-center">POA</div>
+                        <div class="col-xs-4 text-center">POA</div>
+                      </div><!-- /.row -->
+                  </div><!-- / .accordion-panel -->
+            </div><!-- /.list-group accordion -->
+        </div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+      </div><!-- /.row -->
+      
+    </div><!-- /.container -->
+
+  </section><!-- .price section -->
+
+  <section id="promoslider" class="promoslidersection">
+        <div id="owl-demo" class="owl-carousel">
+
+                <div class="item"><img src="images/promo-image.jpg" alt="The Last of us">
+                  <div class="bannertextwrap">
+                    <span class="bannertext">
+                    <h1>WE USE THE FINEST PRODUCTS</h1>
+                      <p>To make your hair shine</p>
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+  </section>
+
+  <section id="contact" class="contactsection">
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Get in touch</h2>
+          <p>48 Anna Villa , Ranelagh, D6.</p>
+          <p>batikhairstudio@gmail.com</p>
+          <p>087 272 0004</p>
+        </div>
+      </div><!-- .row -->
+      
+      <div class="row">
+		<div class="col-md-12 content">
+          <div id="map">svadfsfda</div>
+            </div>
+    </div><!-- .container -->
+  </section><!-- .contactsection-->
+
+  <footer>
+      <div class="row">
+        <div class="col-lg-5 col-lg-7 text-center">
+           <p>Copyright &copy; 2016 &middot; All Rights Reserved &middot; <a href="http://www.nettlepatch.com/" >nettlepatchdesign.com</a></p>
+        </div>
+      </div><!-- .row -->
+    
+  </footer>
+
+
+    <script src="js/global.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="owl-carousel/owl.carousel.js"></script>
+
+    <script>
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+
+      navigation : false,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+      });
+    });
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/google-code-prettify/prettify.js"></script>
+    <script src="js/application.js"></script>
+
+
+  </body>
+</html>

@@ -22,7 +22,6 @@ body {
 
 footer {
     text-align: center;
-    padding: 20px 0;
     font-size: 12px;
     color: #999;
 }
@@ -34,17 +33,75 @@ img {
     border: 0;
 }
 
+.page-content .page-title {
+    display: block;
+    line-height: 1;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    position: relative;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.page-content .page-title:after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 65px;
+    height: 2px;
+    content: "";
+    background-color: #d1d1d1;
+}
+
 .content-wrapper {
 	display: block;
-	padding-top: 75px; 
+	padding-top: 50px; 
 }
+
+.prices-link {
+  display: block;
+  margin-bottom: 30px;
+  position: relative; }
+  .prices-link:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    content: "";
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out; }
+  .prices-link span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 20;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out; }
+  .prices-link:last-child {
+    margin-bottom: 0; }
+  .prices-link:hover:before {
+    opacity: 1; }
+  .prices-link:hover span {
+    opacity: 1; }
 
 .navbar h1 {
     float: left;
 }
 
 .navbar .nav {
-	float: right;
+    float: right;
+    margin-top: 35px;
 }
 
 .navbar .nav a {
@@ -66,6 +123,9 @@ img {
     line-height: 70px;
 }
 
+.navbar .nav li {
+    margin-left: 30px !important;
+}
 
 /* boxes */
 .box {
@@ -91,14 +151,13 @@ img {
 .box .content {
     text-align: center;
     font-size: 14px;
-    padding: 30px 10px;
+    padding: 60px 10px;
 }
 
 .box h4 {
     font-size: 15px;
     font-weight: normal;
     text-transform: uppercase;
-    margin-bottom: 70px;
     letter-spacing: 2px;
 }
 
@@ -143,8 +202,8 @@ img {
 }
 
 .row {
-	display: block;
-	margin-bottom: 30px; }
+	display: block; 
+}
 
 .col {
 	display: block;
@@ -218,6 +277,7 @@ img {
 .flexslider .slides img {
 	width: 100%;
 	display: block;
+	height: auto;
 }
 
 .flexslider .slides:after {
@@ -251,10 +311,6 @@ html[xmlns] .flexslider .slides {
 
 .flexslider .slides {
 	zoom: 1;
-}
-
-.flexslider .slides img {
-	height: auto;
 }
 
 .flex-viewport {
@@ -505,7 +561,8 @@ html[xmlns] .flexslider .slides {
 			right: 3%;
 			top: 100%;
 			background-color: #f1f1f1;
-			z-index: 2000; }
+			z-index: 2000;
+			margin-top: 0px; }
 			.navbar .nav.show {
 				display: block; }
 			.navbar .nav ul li {
@@ -515,9 +572,13 @@ html[xmlns] .flexslider .slides {
 			.navbar .nav ul a {
 				display: block;
 				padding: 15px 20px; }
+			.navbar .nav a:hover {
+			    color: #000 !important;
+			    border-bottom: 0px;
+			}
 	.col {
 		margin-right: 0%;
-		margin-bottom: 20px; }
+		margin-bottom: 10px; }
 		.col.one {
 			width: 100%; }
 		.col.two {
@@ -531,8 +592,13 @@ html[xmlns] .flexslider .slides {
 	.team .box {
 		margin-bottom: 0; }
 	.row {
-		margin-bottom: 0; }
+		margin-bottom: 0;
+		padding-bottom: 0; }
 	.desktop {
 		display: none !important; }
 	.mobile {
-		display: block !important; } }	
+		display: block !important; } 
+	.flexslider .slides img {
+		padding-bottom: 20px; }
+	}
+	}	

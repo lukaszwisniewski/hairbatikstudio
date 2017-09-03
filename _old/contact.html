@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="http://www.batikhairstudio.com/favicon.ico"/>
+    <title>Batik hair studio</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,900italic' rel='stylesheet' type='text/css'>
+    <script src="js/respond.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/gmaps.js"></script>
+
+
+  <script type="text/javascript">
+    var map;
+    $(document).ready(function(){
+      map = new GMaps({
+        el: '#map',
+        lat: 53.3224208,
+        lng: -6.2510185,
+      });
+      map.addMarker({
+        lat: 53.3224208,
+        lng: -6.2510185,
+        title: 'Ranelagh',
+        details: {
+          database_id: 42,
+          author: 'HPNeo'
+        },
+        click: function(e){
+          if(console.log)
+            console.log(e);
+          alert('Batik Hair Stuio is based here.');
+        },
+        mouseover: function(e){
+          if(console.log)
+            console.log(e);
+        }
+      });
+    });
+  </script>
+
+
+</head>
+
+<body>
+<div class="container_contact">
+		<!-- row 1: navigation -->
+    <div class="row">
+    	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="glyphicon glyphicon-arrow-down"></span>
+                  MENU
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://www.facebook.com/batikhairstudio?fref=ts" target="blank"><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                    <li><a href="https://instagram.com/batikhairstudio/" target="blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+                    <li><a href="https://twitter.com/batikhairstudio" target="blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+                </ul>  
+            </div>
+         </nav> 
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 contact">
+            <H3>Find us in Ranelagh</H3>
+            <p>Address:48 Anna Villa Ranelagh D6&nbsp;&nbsp;&nbsp;Email: batikhairstudio@gmail.com&nbsp;&nbsp;&nbsp;087 272 0004&nbsp;&nbsp;&nbsp;</p>            
+        </div>
+    </div><!-- / row -->
+
+
+    	<div class="row">
+		<div class="col-md-12 content">
+          <div id="map"></div>
+            </div>
+	</div><!-- / row -->
+
+
+	<div class="footer">
+		<div class="col-md-4 col-md-push-4 soon">
+			<h3>Website coming soon</h3>
+		</div>
+	</div><!-- / row -->
+</div><!-- / container -->
+
+<!-- js -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
