@@ -5,6 +5,7 @@
  */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,300,400italic,700&subset=latin,latin-ext);
 
 body {
 	padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
@@ -20,10 +21,17 @@ body {
 	margin-bottom: 25px;
 }
 
-footer {
+.footer {
     text-align: center;
+    padding: 20px 0;
     font-size: 12px;
     color: #999;
+}
+
+.container {
+    display: block;
+    width: 1170px;
+    margin: 0 auto;
 }
 
 img {
@@ -31,6 +39,10 @@ img {
     max-width: 100%;
     vertical-align: middle;
     border: 0;
+}
+
+h1 h2 h3 p {
+	font: normal 16px/1.428 "Crimson Text", Arial, Helvetica, sans-serif !important;
 }
 
 .page-content .page-title {
@@ -47,7 +59,8 @@ img {
     position: absolute;
     left: 0;
     bottom: -1px;
-    width: 65px;
+    /*width: 65px;*/
+    width: 97%;
     height: 2px;
     content: "";
     background-color: #d1d1d1;
