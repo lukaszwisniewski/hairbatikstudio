@@ -18,12 +18,39 @@
 	<!-- Custom CSS -->
 	<link href="css/styles.css" rel="stylesheet">
 
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+	<script>
+	    $(document).ready(function(){
+
+	        // shows toggle
+			$("#show").show("slow").siblings();
+
+			/* for pricelist */
+			$('.accordion').on('click', '.accordion-control', function(e){
+				e.preventDefault();
+				$(this)
+					.next('.accordion-panel')
+					.not(':animated')
+					.slideToggle()
+				$(this).find('i').toggleClass('glyphicon-plus glyphicon-minus')
+			});
+			$('.accordion').on('click', '.accordion-control', function(e){
+				if($(this).parents('.accordion').children('panel-collapse').hasClass('in')){
+					e.stopPropagation();
+				}
+			});
+
+	    });
+	</script>
 
 </head>
 
@@ -76,8 +103,232 @@
 					<p>Nunc sapien dui, convallis at tellus quis, feugiat semper purus. Nam lobortis imperdiet lacinia. Donec et libero vel lorem faucibus pharetra. Nullam scelerisque felis aliquet tortor tristique, in malesuada ipsum finibus.</p>
 					<!-- <p>More text...</p> -->
 
-					<a target="_blank" href="images/price-list.pdf" class="prices-link"><img src="images/price-list.jpg" alt=""><span>Open PDF</span></a>
+					<!-- <a target="_blank" href="images/price-list.pdf" class="prices-link"><img src="images/price-list.jpg" alt=""><span>Open PDF</span></a> -->						
+					
+					<div class="row clearfix">
+					 	<div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="list-group accordion">
+								<a href="#" class="list-group-item accordion-control price in"><i class="glyphicon glyphicon-minus"></i> BLOW DRYS</a>
+								<div class=" list-group-item accordion-panel" id="show">
+								   	<div class="row price title-deactive">
+										<div class="col-xs-4 "></div>
+										<div class="col-xs-4 text-center">SENIOR STYLIST</div>
+										<div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Short</div>
+										<div class="col-xs-4 text-center">&euro;25</div>
+										<div class="col-xs-4 text-center">&euro;25</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Medium</div>
+										<div class="col-xs-4 text-center">&euro;25</div>
+										<div class="col-xs-4 text-center">&euro;25</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Long\Bouncy</div>
+										<div class="col-xs-4  text-center">&euro;30</div>
+										<div class="col-xs-4 text-center">&euro;30</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4 ">With Extensions</div>
+										<div class="col-xs-4 text-center">&euro;35</div>
+										<div class="col-xs-4 text-center">&euro;35</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">GHD Curls</div>
+										<div class="col-xs-4  text-center">&euro;25-&euro;30</div>
+										<div class="col-xs-4 text-center">&euro;25-&euro;30</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Upstyle</div>
+										<div class="col-xs-4  text-center">&euro;40-&euro;60</div>
+										<div class="col-xs-4 text-center">&euro;40-&euro;60</div>
+									</div><!-- /.row -->
+								</div><!-- / .accordion-panel -->
+							</div><!-- /.list-group accordion -->
+						</div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+				  	</div><!-- /.row -->
 
+				  	<div class="row">
+					 	<div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="list-group accordion">
+								<a href="#" class="list-group-item accordion-control price" id="panel2"><i class="glyphicon glyphicon-plus"></i>CUT & BLOWDRY</a>
+								<div class=" list-group-item accordion-panel">
+									<div class="row price title-deactive">
+										<div class="col-xs-4"></div>
+										<div class="col-xs-4 text-center">SENIOR STYLIST</div>
+										<div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Ladies: Shampoo, Cut & Blowdry</div>
+										<div class="col-xs-4 text-center">&euro;50</div>
+										<div class="col-xs-4 text-center">&euro;60</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Gents: Shampoo, Cut & Blowdry</div>
+										<div class="col-xs-4 text-center">&euro;25</div>
+										<div class="col-xs-4 text-center">&euro;30</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Students: Shampoo, Cut & Blowdry</div>
+										<div class="col-xs-4 text-center">&euro;40</div>
+										<div class="col-xs-4 text-center">&euro;50</div>
+									</div><!-- /.row -->
+								</div><!-- / .accordion-panel -->
+							</div><!-- /.list-group accordion -->
+						</div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+				  	</div><!-- /.row -->
+
+				  	<div class="row">
+					 	<div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="list-group accordion">
+								<a href="#" class="list-group-item accordion-control price"><i class="glyphicon glyphicon-plus"></i>COLOUR SERVICES</a>
+								<div class=" list-group-item accordion-panel">
+									<div class="row price title-deactive">
+										<div class="col-xs-4"></div>
+										<div class="col-xs-4 text-center">SENIOR STYLIST</div>
+										<div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Highlights - Full Head</div>
+										<div class="col-xs-4 text-center">&euro;100</div>
+										<div class="col-xs-4 text-center">&euro;110</div>
+									  </div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Highlights - Half Head</div>
+										<div class="col-xs-4 text-center">&euro;70</div>
+										<div class="col-xs-4 text-center">&euro;75</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Highlights - T-Bar</div>
+										<div class="col-xs-4 text-center">&euro;45</div>
+										<div class="col-xs-4 text-center">&euro;55</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Balayage</div>
+										<div class="col-xs-4 text-center">&euro;60-&euro;90</div>
+										<div class="col-xs-4 text-center">&euro;70-&euro;100</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Semi Permanent Colour</div>
+										<div class="col-xs-4 text-center">&euro;55</div>
+										<div class="col-xs-4 text-center">&euro;60</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Tint & Scattered</div>
+										<div class="col-xs-4 text-center">&euro;85</div>
+										<div class="col-xs-4 text-center">&euro;95</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Tint - Masking</div>
+										<div class="col-xs-4 text-center">&euro;30</div>
+										<div class="col-xs-4 text-center">&euro;30</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Tint - Roots Only</div>
+										<div class="col-xs-4 text-center">&euro;55</div>
+										<div class="col-xs-4 text-center">&euro;60</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Tint - Roots to Ends</div>
+										<div class="col-xs-4 text-center">&euro;65</div>
+										<div class="col-xs-4 text-center">&euro;75</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Tint - Chemical Free</div>
+										<div class="col-xs-4 text-center">&euro;50</div>
+										<div class="col-xs-4 text-center">&euro;60</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Bleach Tint</div>
+										<div class="col-xs-4 text-center">&euro;80</div>
+										<div class="col-xs-4 text-center">&euro;90</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Gloss Service</div>
+										<div class="col-xs-4 text-center">&euro;45</div>
+										<div class="col-xs-4 text-center">&euro;45</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Cellophanes</div>
+										<div class="col-xs-4 text-center">&euro;30</div>
+										<div class="col-xs-4 text-center">&euro;30</div>
+									</div><!-- /.row -->								  
+								</div><!-- / .accordion-panel -->
+							</div><!-- /.list-group accordion -->
+						</div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+				  	</div><!-- /.row -->
+
+				  	<div class="row">
+						<div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="list-group accordion title-deactive">
+								<a href="#" class="list-group-item accordion-control price"><i class="glyphicon glyphicon-plus"></i>TREATMENTS</a>
+								<div class=" list-group-item accordion-panel">
+									<div class="row price title-deactive">
+										<div class="col-xs-4"></div>
+										<div class="col-xs-4 text-center">SENIOR STYLIST</div>
+										<div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+									</div><!-- /.row -->
+									<div class="row price">
+										<div class="col-xs-4">Full Treatment</div>
+										<div class="col-xs-4 text-center">&euro;20</div>
+										<div class="col-xs-4 text-center">&euro;20</div>
+									</div><!-- /.row -->
+									   <div class="row price">
+										<div class="col-xs-4">Mini Treatment</div>
+										<div class="col-xs-4 text-center">&euro;10</div>
+										<div class="col-xs-4 text-center">&euro;10</div>
+									</div><!-- /.row -->
+								</div><!-- / .accordion-panel -->
+							</div><!-- /.list-group accordion -->
+						</div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+				  	</div><!-- /.row -->
+
+				  	<div class="row">
+						<div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="list-group accordion title-deactive">
+								<a href="#" class="list-group-item accordion-control price"><i class="glyphicon glyphicon-plus"></i>RELAXERS</a>
+								<div class=" list-group-item accordion-panel">
+									<div class="row price title-deactive">
+										<div class="col-xs-4"></div>
+										<div class="col-xs-4 text-center">SENIOR STYLIST</div>
+										<div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+									</div><!-- /.row -->
+									   <div class="row price">
+										<div class="col-xs-4">Permanent Relaxer</div>
+										<div class="col-xs-4 text-center">&euro;140-&euro;160</div>
+										<div class="col-xs-4 text-center">&euro;140-&euro;160</div>
+									</div><!-- /.row -->
+									   <div class="row price">
+										<div class="col-xs-4">Keratin 12 Week Blowdry</div>
+										<div class="col-xs-4 text-center">&euro;100-&euro;130</div>
+										<div class="col-xs-4 text-center">&euro;100-&euro;130</div>
+									</div><!-- /.row -->
+								</div><!-- / .accordion-panel -->
+							</div><!-- /.list-group accordion -->
+						</div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+				  	</div><!-- /.row -->
+					
+				  	<div class="row">
+						<div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+							<div class="list-group accordion">
+								<a href="#" class="list-group-item accordion-control price"><i class="glyphicon glyphicon-plus"></i>HAIR EXTENSIONS</a>
+								<div class=" list-group-item accordion-panel">
+									<div class="row price title-deactive">
+										<div class="col-xs-4"></div>
+										<div class="col-xs-4 text-center">SENIOR STYLIST</div>
+										<div class="col-xs-4 text-center">CREATIVE DIRECTOR</div>
+									</div><!-- /.row -->
+									   <div class="row price">
+										<div class="col-xs-4"></div>
+										<div class="col-xs-4 text-center">POA</div>
+										<div class="col-xs-4 text-center">POA</div>
+									</div><!-- /.row -->
+								</div><!-- / .accordion-panel -->
+							</div><!-- /.list-group accordion -->
+						</div><!-- /.col-lg-offset-1 col-lg-10 col-lg-offset-1 -->
+					</div><!-- /.row -->
 				</div>
 			</div>
 			
@@ -111,9 +362,6 @@
 
 	</div>
 	<!-- /.container -->
-
-	<!-- jQuery -->
-	<script src="js/jquery.js"></script>
 
 	<!-- flexslider -->
 	<script src="js/flexslider-min.js"></script>
